@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: cadetblue;
+}
+
+h1 {
+  color: cyan;
+  text-align: left;
+  font-family: Verdana;
+}
+
+p {
+  font-family: Times New Roman;
+  color: indigo;
+  font-size: 22px;
+}
+img {
+  border-radius: 20px;
+  opacity: 0.8;
+  width: 300px;
+  margin-right: auto;
+}
+table, th, td {
+  border: 2px solid black;
+  background-color: red;
+}
+div {
+  background-color: red;
+  width: 650px;
+  border: 5px solid black;
+  padding: 1px;
+  margin: 10px;
+}
+}
+</style>
+<script>
+function vezi_viitor()
+{
+document.getElementById("nume").innerHTML = "ing. Goia Iulian Teodor";
+document.getElementById("poza").src = "DSCF2826.JPG";
+document.getElementById("poza").style.opacity = "0.8";
+document.getElementById("poza").style.border = "7px";
+document.body.style.backgroundColor = "#ff00ff";
+document.getElementById("font").style.fontFamily = "Impact,Charcoal,sans-serif";
+document.getElementById("font").style.fontStyle = "italic"
+
+var tabel = document.getElementById("tabel");
+tabel.rows[0].cells[0].innerHTML = "Analiza";
+tabel.rows[1].cells[0].innerHTML = "CCEP";
+tabel.rows[2].cells[0].innerHTML = "Algebra";
+tabel.rows[2].cells[1].innerHTML = "Anul I";
+document.getElementById("tabel").style.color = "blue";
+document.getElementById("tabel").style.backgroundColor = "green";
+
+document.getElementById('div').style.backgroundColor = 'green' ; 
+
+document.getElementById("citat").innerHTML = "Citat: ~Omul poate deveni om numai prin educaţie. El nu e nimic decât ceea ce face educaţia din el.~ – Immanuel Kant";
+document.getElementById("pasiuni_1").innerHTML = "- Plimbatul cu bicicleta";
+document.getElementById("pasiuni_2").innerHTML = "- Motocross";
+document.getElementById("pasiuni_3").innerHTML = "- Curse de masini";
+}
+function arata_varsta()
+{
+var azi = new Date;
+var varsta_mea;
+var an_nas = document.getElementById("varsta").innerHTML;
+var an_cur = azi.getFullYear();
+varsta_mea = an_cur - parseInt(an_nas);
+document.getElementById("varsta").innerHTML = varsta_mea;
+
+}
+</script>
+</head>
+<body id="font">
+<h1 id="nume">Goia Iulian Teodor</h1>
+<p>Nume: Goia</p>
+<p>Prenume: Iulian Teodor</p>
+<p>E-mail: Goia.Ma.Iulian@utcluj.didatec.ro</p>
+<p>Numar de telefon: 0748388020</p>
+<p>An/Varsta: </p><p onmouseover = "arata_varsta()" id="varsta">2001</p>
+<p>Poza: </p>
+<img id = "poza" src="PIM_6501.jpg" width="250" height="400">
+<p id="citat">Citat:  “Natura ne face asemanatori. Edicatia ne deosebeste.” (Confucius)</p>
+<p>Materii preferate: </p>
+<table id = "tabel" style="width:60%">
+  <tr>
+    <td>Informatica aplicata</td>
+    <td>Anul I</td>
+    <td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/06.pdf">Descriere disciplina</a></td>
+  </tr>
+  <tr>
+    <td>Programarea calculatoarelor-limbaje</td>
+    <td>Anul I</td>
+    <td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/04.pdf">Descriere disciplina</a></td>
+  </tr>
+  <tr>
+    <td>Componente si circuite electronice pasive</td>
+    <td>Anul I</td>
+    <td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/05.pdf">Descriere disciplina</a></td>
+  </tr>
+</table>
+<div id="div">
+<p>Hobby-uri: </p>
+<p id = "pasiuni_1">- Trail running</p>
+<p id = "pasiuni_2">- Gaming</p>
+<p id = "pasiuni_3">- Sa citesc</p>
+</div>
+<button onclick="vezi_viitor()">Vezi viitor</button>
+</body>
+</html>
